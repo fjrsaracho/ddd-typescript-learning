@@ -22,7 +22,8 @@ export default class UserDocumentParser {
         return {
             _id: user.id,
             name: user.name,
-            lastname: user.lastname
+            lastname: user.lastname,
+            password: user.password
         }
     }
 
