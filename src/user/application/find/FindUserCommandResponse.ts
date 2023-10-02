@@ -1,5 +1,3 @@
-import User from "../../domain/entity/User";
-
 export default class FindUserCommandResponse {
     users: { name: string; id: string; lastname: string }[];
 

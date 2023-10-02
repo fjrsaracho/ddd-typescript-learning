@@ -1,11 +1,10 @@
 import User from "../../domain/entity/User";
 import UserDocumentParser from "./UserDocumentParser";
-import {Document, InsertOneResult, WithId} from "mongodb";
+import {InsertOneResult, WithId} from "mongodb";
 import DbHandler from "./DbHandler";
 
 const USER_COLLECTION_NAME: string = 'users';
 export default class UserRepository {
-
 
     private _dbHandler: ReturnType<typeof DbHandler>;
     private _userDocumentParser: UserDocumentParser;
@@ -27,7 +26,6 @@ export default class UserRepository {
             if (result?.acknowledged) {
                 return Promise.resolve();
             }
-
         } catch (e) {
             return Promise.reject(e);
         }

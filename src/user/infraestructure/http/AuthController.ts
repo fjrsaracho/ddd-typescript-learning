@@ -20,7 +20,6 @@ AuthController.post('/create/:id', async (req: Request, res: Response): Promise<
         } catch (e) {
                 res.status(400).send();
         }
-
 });
 
 export default AuthController;

@@ -5,7 +5,6 @@ export default class UserDocumentParser {
         return userDocumentList.map(ud => {
             return new User(ud._id, ud.name, ud.lastname, ud.password);
         });
-
     }
     toDomain(userDocument: {
         _id: string;
@@ -28,5 +27,4 @@ export default class UserDocumentParser {
             password: user.password
         }
     }
-
 }

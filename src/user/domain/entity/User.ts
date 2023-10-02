@@ -1,11 +1,8 @@
-import {randomUUID} from "crypto";
-
 export default class User {
     private _id: string;
     private _name: string;
     private _lastname: string;
     private _password: string;
-
 
     constructor(id: string, name: string, lastname: string, password: string) {
         this._id = id;

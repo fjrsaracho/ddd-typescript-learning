@@ -26,7 +26,7 @@ const _connect = async (): Promise<MongoClient> => {
 export default function DbHandler(): {
     getCollection<T extends Document = Document>(USER_COLLECTION_NAME: string): Promise<Collection<T>>;
     disconnect(): void;
-} {
+    } {
     const createDb = async (): Promise<Db> => {
         const db: mongoDB.MongoClient = await _connect();
 

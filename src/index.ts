@@ -7,11 +7,10 @@ dotenv.config();
 const app: Express = express();
 
 app.use(express.json());
+app.use('/user', AuthController);
 
 app.get('/', (rq: Request, rs: Response) => {
     rs.send("");
 });
-
-app.use('/user', AuthController);
 
 app.listen(process.env.PORT, () => {});
