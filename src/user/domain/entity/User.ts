@@ -7,11 +7,11 @@ export default class User {
     private _password: string;
 
 
-    constructor(id: string, name: string, lastname: string) {
+    constructor(id: string, name: string, lastname: string, password: string) {
         this._id = id;
         this._name = name;
         this._lastname = lastname;
-        this._password = randomUUID();
+        this._password = password;
     }
 
     get id(): string {

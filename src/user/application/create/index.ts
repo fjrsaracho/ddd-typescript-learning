@@ -1,6 +1,7 @@
 import CreateUserCommand from "./CreateUserCommand";
 import UserRepository from "../../infraestructure/persistence/UserRepository";
 import User from "../../domain/entity/User";
+import {randomUUID} from "crypto";
 
 export default class CreateUser {
     private _userRepository: UserRepository;
@@ -8,6 +9,6 @@ export default class CreateUser {
         this._userRepository = userRepository;
     }
     exec(command: CreateUserCommand): void {
-        this._userRepository.save(new User(command.id, command.name, command.lastname));
+        this._userRepository.save(new User(command.id, command.name, command.lastname, randomUUID()));
     }
 }
