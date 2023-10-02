@@ -1,5 +1,4 @@
 import {createContainer, asClass, asValue, InjectionMode, asFunction} from "awilix";
-import {v4 as uuidv4} from 'uuid';
 import UserRepository from "./user/infraestructure/persistence/UserRepository";
 import FindUser from "./user/application/find";
 import DbHandler from "./user/infraestructure/persistence/DbHandler";
@@ -11,7 +10,6 @@ const container = createContainer({
 });
 
 container.register({
-    uuidv4: asValue(uuidv4),
     findUser: asClass(FindUser),
     createUser: asClass(CreateUser),
     userRepository: asClass(UserRepository),
